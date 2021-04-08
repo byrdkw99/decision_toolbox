@@ -1774,8 +1774,8 @@ body,
 @media (min-width: 1024px) {
   .row {
     display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+/*    display: -ms-flexbox;
+    display: flex;*/
     -webkit-align-items: stretch; }
   .title {
     position: relative;
