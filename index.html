@@ -38,6 +38,33 @@
     }
     ga('send', 'pageview');
     </script>
+<style>
+    label {
+        font-family: 'Circular-Loom';
+    }
+    h1 {
+        font-family: 'Circular-Loom';
+    }
+    .row {
+        display: -webkit-box;
+    }
+    .card-content p {
+        line-height: 1.4em;
+        font-family: monospace;
+        opacity: 0.75;
+    }
+    #Research {
+        background: #3498da;
+    }
+    .title {
+        text-align: center;
+        text-transform: uppercase;
+        border-bottom: solid 1px #fff;
+        font-size: 14px;
+        font-family: 'Circular-Loom';
+    }
+</style>
+
 </head>
 
 <body class="body-single">
@@ -55,7 +82,7 @@
     <div id="printTitle" class="hidden">Project name: ________________________</div>
     <header id="header" class="flexcontainer">
         <div id="title" class="hide-for-print">
-            <h1>UX Project Checklist</h1>
+            <h1>Decision Management Toolbox</h1>
         </div>
         <div id="gdrivebox" class="hide-for-print flexgrow">
             <span id="signin-do">
@@ -80,64 +107,19 @@
                 </p>
             </div>
         </div>
-        <div id="sharebox" class="hide-for-print">
-            <ul>
-                <li>
-                    <!-- facebook plugin -->
-                    <div class="fb-like" data-href="http://uxchecklist.github.io/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-                </li>
-                <li>
-                    <!-- linkedin plugin -->
-                    <script src="//platform.linkedin.com/in.js" type="text/javascript">
-                    lang: en_US
-                    </script>
-                    <script type="IN/Share" data-counter="right"></script>
-                </li>
-                <li>
-                    <!-- twitter plugin -->
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="UX Project Checklist: The UX Design Process From A to Z" data-via="sovesove" data-hashtags="ux,uxchecklist">Tweet</a>
-                    <script>
-                    ! function(d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0],
-                            p = /^http:/.test(d.location) ? 'http' : 'https';
-                        if (!d.getElementById(id)) {
-                            js = d.createElement(s);
-                            js.id = id;
-                            js.src = p + '://platform.twitter.com/widgets.js';
-                            fjs.parentNode.insertBefore(js, fjs);
-                        }
-                    }(document, 'script', 'twitter-wjs');
-                    </script>
-                </li>
-            </ul>
-        </div>
-        <div class="support-us-wrapper hide-for-print">
-            <!-- PayPal donate button -->
-            <div class="wrapper-paypal-button hide-for-print">
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <input type="hidden" name="cmd" value="_s-xclick">
-                    <input type="hidden" name="hosted_button_id" value="CZJKKFXRARWJL">
-                    <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!"> <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-                </form>
-            </div>
-            <!-- PayPal donate button END -->
-            <!-- Patreon -->
-            <div class="wrapper-patreon-button hide-for-print not-released">
-                <iframe src="/widgets/patreon.html" frameborder="0" height="auto" scrolling="no" width="100%"></iframe>
-            </div>
-            <!-- Patreon END -->
-        </div>
     </header>
     <form id="checklist-form" method="POST">
+
+        <!-- Start Row -->
         <div class="row clearfix">
-            <div id="Research" class="title"><span>Research</span></div>
+            <div id="Research" class="title"><span>Define</span></div>
             <div class="cards">
                 <div class="img">
                     <img class="left" src="img/icons128/Deep-Crawl.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox1">Competitive Analysis</label>
-                    <p>See how others solve similar problems and try to not reinvent the wheel. <a class="more hide-for-print" href="http://boxesandarrows.com/competitive-analysis-understanding-the-market-context/" target="_blank">Read more<span class="visually-hidden"> about Competitive Analysis: Understanding the Market Context</span></a></p>
+                    <label for="checkbox1">Decision Log</label>
+                    <p>Create a log for all decisions being made by your team, product, project, etc... <a class="more hide-for-print" href="http://boxesandarrows.com/competitive-analysis-understanding-the-market-context/" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox1" type="checkbox">
@@ -148,8 +130,8 @@
                     <img class="left" src="img/icons128/WebAnalytic.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox2">Data analysis</label>
-                    <p>Do you have all the useful data you need? Try to have a look at funnels, clicks, page views, performances... <a class="more hide-for-print" href="http://www.nngroup.com/articles/analytics-user-experience/" target="_blank">Read more<span class="visually-hidden"> about Three Uses for Analytics in User-Experience Practice</span></a></p>
+                    <label for="checkbox2">Roles</label>
+                    <p>Define who's going to be involved in the decision and what their roles are in the process <a class="more hide-for-print" href="http://www.nngroup.com/articles/analytics-user-experience/" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox2" type="checkbox">
@@ -160,481 +142,306 @@
                     <img class="left" src="img/icons128/Viral-Marketing.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox3">User feedback</label>
+                    <label for="checkbox3">Decision Framing</label>
                     <p></p>
-                    <p>Always speak with Customer Care team! Don't have one? Check your old surveys or videos, what your customer says? What do they actually do? <a class="more hide-for-print" href="https://www.gov.uk/service-manual/user-centred-design/user-research/index.html" target="_blank">Read more<span class="visually-hidden"> about An introduction to user research techniques</span></a></p>
+                    <p>Give background and context for why the decision needs to be made, what we already know and what it impacts. <a class="more hide-for-print" href="https://www.gov.uk/service-manual/user-centred-design/user-research/index.html" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox3" type="checkbox">
                 </div>
             </div>
-        </div>
-        <div class="row clearfix">
-            <div id="Plan" class="title"><span>Plan</span></div>
-            <div class="cards clearfix">
+            <div class="cards">
                 <div class="img">
-                    <img class="left" src="img/icons128/business-card.png" alt="">
+                    <img class="left" src="img/icons128/Deep-Crawl.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox4">User stories</label>
-                    <p>Have you done personas yet? If not DO IT NOW. Ok, now use them to write down user stories and scenarios. <a class="more hide-for-print" href="http://chrbutler.com/how-to-tell-the-users-story" target="_blank">Read more<span class="visually-hidden"> about How to Tell the User’s Stor</span></a></p>
+                    <label for="checkbox4">Desired Outcomes</label>
+                    <p>If the right decision is made, what would we expect to see? <a class="more hide-for-print" href="http://boxesandarrows.com/competitive-analysis-understanding-the-market-context/" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox4" type="checkbox">
                 </div>
             </div>
-            <div class="cards clearfix">
+        </div>
+        <!-- End Row -->
+
+        <!-- Start Row -->
+        <div class="row clearfix">
+            <div id="Research" class="title"><span>Segment</span></div>
+            <div class="cards">
                 <div class="img">
-                    <img class="left" src="img/icons128/Everflux.png" alt="">
+                    <img class="left" src="img/icons128/Deep-Crawl.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox5">User flows</label>
-                    <p>Create your user's flow based on the scenarios you created, you can use it later to review the journey and create wireframes on top of each step. <a class="more hide-for-print" href="https://signalvnoise.com/posts/1926-a-shorthand-for-designing-ui-flows" target="_blank">Read more<span class="visually-hidden"> about A shorthand for designing UI flows</span></a></p>
+                    <label for="checkbox5">Prioritization</label>
+                    <p>Identify which decision need to be made now vs later <a class="more hide-for-print" href="http://boxesandarrows.com/competitive-analysis-understanding-the-market-context/" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox5" type="checkbox">
                 </div>
             </div>
-            <div class="cards clearfix">
+            <div class="cards">
                 <div class="img">
-                    <img class="left" src="img/icons128/computer.png" alt="">
+                    <img class="left" src="img/icons128/WebAnalytic.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox6">Red routes</label>
-                    <p>Define red routes for your product and you’ll be able to identify, prioritise and eliminate any usability obstacles on key user journeys. <a class="more hide-for-print" href="http://userfocus.co.uk/articles/prioritising-functions.html" target="_blank">Read more<span class="visually-hidden"> about How red routes can help you take charge of your product backlog</span></a></p>
+                    <label for="checkbox6">Speed Score</label>
+                    <p>Identify how quickly you can make decisions <a class="more hide-for-print" href="https://www.haystack.pro/blog/the-speed-score" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox6" type="checkbox">
                 </div>
             </div>
-        </div>
-        <div class="row clearfix">
-            <div id="Explore" class="title"><span>Explore</span></div>
-            <div class="cards clearfix">
+            <div class="cards">
                 <div class="img">
-                    <img class="left" src="img/icons128/beer.png" alt="">
+                    <img class="left" src="img/icons128/Viral-Marketing.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox7">Brainstorm & sketch</label>
-                    <p>Find a war room, fill it with markers and drinks, get together and sketch, discuss, vote, disrupt, have fun! <a class="more hide-for-print" href="http://www.gamestorming.com/the-wiki/" target="_blank">Read more<span class="visually-hidden"> about Gamestorming</span></a></p>
+                    <label for="checkbox7">Outcome Tree</label>
+                    <p></p>
+                    <p>Understand all potential outcomes from a decision <a class="more hide-for-print" href="https://www.gov.uk/service-manual/user-centred-design/user-research/index.html" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox7" type="checkbox">
                 </div>
             </div>
-            <div class="cards clearfix">
+            <div class="cards">
                 <div class="img">
-                    <img class="left" src="img/icons128/Blog.png" alt="">
+                    <img class="left" src="img/icons128/Deep-Crawl.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox8">Wireframe</label>
-                    <p>Add some details and structure to your ideas, reuse patterns and create pages on top of your user flows so you'll not leave anything behind. <a class="more hide-for-print" href="http://www.uxpin.com/guide-to-wireframing.html" target="_blank">Read more<span class="visually-hidden"> about The Guide to Wireframing</span></a></p>
+                    <label for="checkbox8">Confidence Scoring</label>
+                    <p>Baseline the information you know and the amount of infomration you need to increase confidence and reduce risk <a class="more hide-for-print" href="http://boxesandarrows.com/competitive-analysis-understanding-the-market-context/" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox8" type="checkbox">
                 </div>
             </div>
-            <div class="cards clearfix">
+        </div>
+        <!-- End Row -->
+
+        <!-- Start Row -->
+        <div class="row clearfix">
+            <div id="Research" class="title"><span>Diverge</span></div>
+            <div class="cards">
                 <div class="img">
-                    <img class="left" src="img/icons128/API.png" alt="">
+                    <img class="left" src="img/icons128/Deep-Crawl.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox9">Prototype</label>
-                    <p>You can start creating paper prototypes and continuously iterate to more functional ones. Use sketches, HTML pages or static images, then just get some people and test. <a class="more hide-for-print" href="http://uxdesignweekly.com/ux-resources/prototyping-tools/" target="_blank">Read more<span class="visually-hidden"> about Prototyping Tools</span></a></p>
+                    <label for="checkbox9">Opportunity Tree</label>
+                    <p>Map opportunities based on the 'why' without jumping to solutions <a class="more hide-for-print" href="http://boxesandarrows.com/competitive-analysis-understanding-the-market-context/" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox9" type="checkbox">
                 </div>
             </div>
-        </div>
-        <div class="row clearfix">
-            <div id="Communicate" class="title"><span>Communicate</span></div>
-            <div class="cards clearfix">
+            <div class="cards">
                 <div class="img">
-                    <img class="left" src="img/icons128/Dynamic-Content.png" alt="">
+                    <img class="left" src="img/icons128/WebAnalytic.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox10">IA</label>
-                    <p>Understand your users, your data structure and your channels. How can you organise your navigation and content in a clear and consistent way? <a class="more hide-for-print" href="http://alistapart.com/article/thedisciplineofcontentstrategy" target="_blank">Read more<span class="visually-hidden"> about The Discipline of Content Strategy</span></a></p>
+                    <label for="checkbox10">Source Proposals</label>
+                    <p>Collect feedback from the team and stakeholder to combat bias and alpha decision-makers <a class="more hide-for-print" href="http://www.nngroup.com/articles/analytics-user-experience/" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox10" type="checkbox">
                 </div>
             </div>
-            <div class="cards clearfix">
+            <div class="cards">
                 <div class="img">
-                    <img class="left" src="img/icons128/typewriter.png" alt="">
+                    <img class="left" src="img/icons128/Viral-Marketing.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox11">Language</label>
-                    <p>Follow your brand personality, keep in mind users' culture and language, the context of your product and make sure they understand you. <a class="more hide-for-print" href="http://alistapart.com/article/translation-is-ux" target="_blank">Read more<span class="visually-hidden"> about Translation is UX</span></a></p>
+                    <label for="checkbox11">Prototype</label>
+                    <p></p>
+                    <p>Ensure all ideas are visualized and elevated to a shared level of understanding <a class="more hide-for-print" href="https://www.gov.uk/service-manual/user-centred-design/user-research/index.html" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox11" type="checkbox">
                 </div>
             </div>
-            <div class="cards clearfix">
+            <div class="cards">
                 <div class="img">
-                    <img class="left" src="img/icons128/sofa.png" alt="">
+                    <img class="left" src="img/icons128/Deep-Crawl.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox12">Accessibility</label>
-                    <p>You don’t need to add extra functionality or to duplicate any content. The key is simply to assess the requirements of those with different skills and limited devices. <a class="more hide-for-print" href="https://www.gov.uk/service-manual/user-centred-design/accessibility.html" target="_blank">Read more <span class="visually-hidden"> about GOV.UK Accessibility</span></a></p>
+                    <label for="checkbox12">Assumption Map</label>
+                    <p>Identify critical assumptions being made that need to be validate to make or break the decision <a class="more hide-for-print" href="http://boxesandarrows.com/competitive-analysis-understanding-the-market-context/" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox12" type="checkbox">
                 </div>
             </div>
         </div>
+        <!-- End Row -->
+
+        <!-- Start Row -->
         <div class="row clearfix">
-            <div id="Love" class="title">
-                <span id="LoveTitleIcon" class="span--iconTitle">
-                        <i class="fa fa-heart"></i>
-                    </span>
-            </div>
-            <div class="cards clearfix">
+            <div id="Research" class="title"><span>Converge</span></div>
+            <div class="cards">
                 <div class="img">
-                    <img class="left" src="img/icons128/plant.png" alt="">
+                    <img class="left" src="img/icons128/Deep-Crawl.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox101">Sustainable</label>
-                    <p> Help the planet by reducing the resources you use, reinforce greener behaviours and promote sustainability best practices. Yes, your product can do that! <a class="more hide-for-print" href=" https://uxdesign.cc/product-design-for-sustainability-3fffbb2a7f0e" target="_blank">Read more<span class="visually-hidden"> about Product Design for Sustainability</span></a></p>
-                </div>
-                <div class="right">
-                    <input id="checkbox101" type="checkbox">
-                </div>
-            </div>
-            <div class="cards clearfix">
-                <div class="img">
-                    <img class="left" src="img/icons128/medical-box.png" alt="">
-                </div>
-                <div class="card-content left">
-                    <label for="checkbox111">Ethical</label>
-                    <p>Move fast and break things! What about slow down and make sure your product is secure, private, honest? Be considerate when you design and follow good ethics.<a class="more hide-for-print" href="https://medium.muz.li/the-state-of-ethics-in-design-60a1088f8358" target="_blank"> Read more<span class="visually-hidden"> about The State of Ethics in Design</span></a></p>
-                </div>
-                <div class="right">
-                    <input id="checkbox111" type="checkbox">
-                </div>
-            </div>
-            <div class="cards clearfix">
-                <div class="img">
-                    <img class="left" src="img/icons128/inclusive-icon.png" alt="">
-                </div>
-                <div class="card-content left">
-                    <label for="checkbox121">Inclusive</label>
-                    <p>Remember that everything you design is skewed by your own view and background. Be sure to open your design process to remove your biases and design for everyone.<a class="more hide-for-print" href="https://uxdesign.cc/how-design-can-help-with-inclusion-9d71a60d6359" target="_blank"> Read more<span class="visually-hidden"> about How design can help with inclusion</span></a></p>
-                </div>
-                <div class="right">
-                    <input id="checkbox121" type="checkbox">
-                </div>
-            </div>
-        </div>
-        <div class="row clearfix">
-            <div id="Create" class="title"><span>Create</span></div>
-            <div class="cards clearfix">
-                <div class="img">
-                    <img class="left" src="img/icons128/Squeeze-Page.png" alt="">
-                </div>
-                <div class="card-content left">
-                    <label for="checkbox13">UI elements</label>
-                    <p>Reuse elements and patterns. Follow your style guidelines. Don't have any? Create your guidelines. Start small, then create pages. <a class="more hide-for-print" href="http://styleguides.io/" target="_blank">Read more<span class="visually-hidden"> about styleguides.io</span></a></p>
+                    <label for="checkbox13">Bias Checklist</label>
+                    <p>Before narrowing down proposals, check against biases to make sure options aren't unfairly filtered <a class="more hide-for-print" href="http://boxesandarrows.com/competitive-analysis-understanding-the-market-context/" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox13" type="checkbox">
                 </div>
             </div>
-            <div class="cards clearfix">
+            <div class="cards">
                 <div class="img">
-                    <img class="left" src="img/icons128/cell.png" alt="">
+                    <img class="left" src="img/icons128/WebAnalytic.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox14">Gestures</label>
-                    <p>So you have a swipe slider? Tell me more about pinch, drag, zoom, rotate, shake, six-inch smartphones, left-handed people, mouseover, kinect, motion detection... <a class="more hide-for-print" href="http://www.smashingmagazine.com/2013/05/24/gesture-driven-interface/" target="_blank">Read more<span class="visually-hidden"> about Beyond The Button: Embracing The Gesture-Driven Interface</span></a></p>
+                    <label for="checkbox14">Counter-thinking</label>
+                    <p>For all options, provide a counter-thinking approach <a class="more hide-for-print" href="http://www.nngroup.com/articles/analytics-user-experience/" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox14" type="checkbox">
                 </div>
             </div>
-            <div class="cards clearfix">
+            <div class="cards">
                 <div class="img">
-                    <img class="left" src="img/icons128/User-Experience.png" alt="">
+                    <img class="left" src="img/icons128/Viral-Marketing.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox15">Responsiveness</label>
-                    <p>Can I see it on my mobile? Oh wait, what about my smart-watch which works as a remote for my 50" TV. Bonus: remember cross device experience. <a class="more hide-for-print" href="http://uxmag.com/articles/create-a-better-responsive-user-experience/" target="_blank">Read more<span class="visually-hidden"> about Create a Better Responsive User Experience</span></a></p>
+                    <label for="checkbox15">Criteria Scoring</label>
+                    <p></p>
+                    <p>Measure each option based on a set of high level criteria before making a final decision <a class="more hide-for-print" href="https://www.gov.uk/service-manual/user-centred-design/user-research/index.html" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox15" type="checkbox">
                 </div>
             </div>
-        </div>
-        <div class="row clearfix">
-            <div id="Feedbacks" class="title"><span>Give feedback</span></div>
-            <div class="cards clearfix">
+            <div class="cards">
                 <div class="img">
-                    <img class="left" src="img/icons128/lunch.png" alt="">
+                    <img class="left" src="img/icons128/Deep-Crawl.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox16">Waiting times</label>
-                    <p>If your users have to wait ages for the page to load, at least show them a loader. If take longer why don't you try something more entertaining? <a class="more hide-for-print" href="http://www.sitepoint.com/3-tips-make-application-feel-faster/" target="_blank">Read more<span class="visually-hidden"> about 3 Tips To Make Your Application Feel Faster</span></a></p>
+                    <label for="checkbox16">Decision Meeting</label>
+                    <p>Run a final decisiion meeting with all stakeholders <a class="more hide-for-print" href="http://boxesandarrows.com/competitive-analysis-understanding-the-market-context/" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox16" type="checkbox">
                 </div>
             </div>
-            <div class="cards clearfix">
+        </div>
+        <!-- End Row -->
+
+        <!-- Start Row -->
+        <div class="row clearfix">
+            <div id="Research" class="title"><span>Validate</span></div>
+            <div class="cards">
                 <div class="img">
-                    <img class="left" src="img/icons128/Spam.png" alt="">
+                    <img class="left" src="img/icons128/Deep-Crawl.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox17">Errors</label>
-                    <p>Be clear and specific on what and where user's error is. I mean, your error, because if it's your fault you should say it. <a class="more hide-for-print" href="http://uxmag.com/articles/failing-gracefully" target="_blank">Read more<span class="visually-hidden"> about Failing Gracefully</span></a></p>
+                    <label for="checkbox17">Define Success</label>
+                    <p>After making the decision, identify how we'll measure success if this was the correct decision <a class="more hide-for-print" href="http://boxesandarrows.com/competitive-analysis-understanding-the-market-context/" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox17" type="checkbox">
                 </div>
             </div>
-            <div class="cards clearfix">
+            <div class="cards">
                 <div class="img">
-                    <img class="left" src="img/icons128/Usability.png" alt="">
+                    <img class="left" src="img/icons128/WebAnalytic.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox18">Completed actions</label>
-                    <p>Give immediate and clear feedback of successful user's actions. Do not always wait for server response, trust your server once in a while! <a class="more hide-for-print" href="http://www.lukew.com/ff/entry.asp?1759" target="_blank">Read more<span class="visually-hidden"> about Performing Actions Optimistically</span></a></p>
+                    <label for="checkbox18">Define Goals & Objectives</label>
+                    <p>Create a roadmap of objectives over time to learn quickly and celebrate quick wins <a class="more hide-for-print" href="http://www.nngroup.com/articles/analytics-user-experience/" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox18" type="checkbox">
                 </div>
             </div>
-        </div>
-        <div class="row clearfix">
-            <div id="Finalise" class="title"><span>Finalise</span></div>
-            <div class="cards clearfix">
+            <div class="cards">
                 <div class="img">
-                    <img class="left" src="img/icons128/Optimization.png" alt="">
+                    <img class="left" src="img/icons128/Viral-Marketing.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox19">Finalise layout</label>
-                    <p>It's time to let your design shine, make it in the right way, don't stop with the first solution, always ask "is this the best you can do?" <a class="more hide-for-print" href="http://www.usability.gov/what-and-why/visual-design.html" target="_blank">Read more<span class="visually-hidden"> about Visual Design Basics</span></a></p>
+                    <label for="checkbox19">Align Work</label>
+                    <p></p>
+                    <p>Ouline what needs to be done to execute and validate the decision <a class="more hide-for-print" href="https://www.gov.uk/service-manual/user-centred-design/user-research/index.html" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox19" type="checkbox">
                 </div>
             </div>
-            <div class="cards clearfix">
+            <div class="cards">
                 <div class="img">
-                    <img class="left" src="img/icons128/E-Commerce.png" alt="">
+                    <img class="left" src="img/icons128/Deep-Crawl.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox20">Use of images and icons</label>
-                    <p>Use of icons and images is strongly influenced by context, culture and layout that you use. Like icons, test your images, small changes can bring huge improvements. <a class="more hide-for-print" href="http://www.nngroup.com/articles/icon-usability/" target="_blank">Read more<span class="visually-hidden"> about Icon Usability</span></a></p>
+                    <label for="checkbox20">Activity Board</label>
+                    <p>Have a shared understanding of how and where the necessary activities and work will be tracked <a class="more hide-for-print" href="http://boxesandarrows.com/competitive-analysis-understanding-the-market-context/" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox20" type="checkbox">
                 </div>
             </div>
-            <div class="cards clearfix">
+        </div>
+        <!-- End Row -->
+
+        <!-- Start Row -->
+        <div class="row clearfix">
+            <div id="Research" class="title"><span>Communicate</span></div>
+            <div class="cards">
                 <div class="img">
-                    <img class="left" src="img/icons128/Heading-Tag.png" alt="">
+                    <img class="left" src="img/icons128/Deep-Crawl.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox21">Font & colours hierarchy</label>
-                    <p>Use colours and font sizes properly, try to follow your guidelines and keep it simple. The best visual hierarchies lead users to take the action confidently. <a class="more hide-for-print" href="http://52weeksofux.com/post/443828775/visual-hierarchy" target="_blank">Read more<span class="visually-hidden"> about Visual hierarchy</span></a></p>
+                    <label for="checkbox21">Track Work</label>
+                    <p>Setup a cadence to review the work being done and escalate and new decisions that need to be made <a class="more hide-for-print" href="http://boxesandarrows.com/competitive-analysis-understanding-the-market-context/" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox21" type="checkbox">
                 </div>
             </div>
-        </div>
-        <div class="row clearfix">
-            <div id="Delight" class="title"><span>Delight</span></div>
-            <div class="cards clearfix">
+            <div class="cards">
                 <div class="img">
-                    <img class="left" src="img/icons128/pen-ink.png" alt="">
+                    <img class="left" src="img/icons128/WebAnalytic.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox22">Micro copy</label>
-                    <p>Every word is important, and a bit of personality will help your brand. <a class="more hide-for-print" href="http://www.smashingmagazine.com/2012/07/18/the-personality-layer/" target="_blank">Read more<span class="visually-hidden"> about The Personality Layer</span></a></p>
+                    <label for="checkbox22">Decision Board</label>
+                    <p>Make all decisions visible and engage with the rest of the organization <a class="more hide-for-print" href="http://www.nngroup.com/articles/analytics-user-experience/" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox22" type="checkbox">
                 </div>
             </div>
-            <div class="cards clearfix">
+            <div class="cards">
                 <div class="img">
-                    <img class="left" src="img/icons128/search-document.png" alt="">
+                    <img class="left" src="img/icons128/Viral-Marketing.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox23">Micro interactions</label>
-                    <p>Trigger, rules, feedback, loop. Details make the product. Bonus: Ever heard about easter eggs? <a class="more hide-for-print" href="http://microinteractions.com/what-is-a-microinteraction/" target="_blank">Read more<span class="visually-hidden"> about What is a microinteraction</span></a></p>
+                    <label for="checkbox23">Outcome Review</label>
+                    <p></p>
+                    <p>Revisit the decision to log the actual outcome <a class="more hide-for-print" href="https://www.gov.uk/service-manual/user-centred-design/user-research/index.html" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox23" type="checkbox">
                 </div>
             </div>
-            <div class="cards clearfix">
+            <div class="cards">
                 <div class="img">
-                    <img class="left" src="img/icons128/Exit-Page.png" alt="">
+                    <img class="left" src="img/icons128/Deep-Crawl.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox24">Transitions</label>
-                    <p>Motion shouldn't be only beautiful, it should build meaning about the spatial relationships, functionality, and intention of the system. <a class="more hide-for-print" href="http://www.google.co.uk/design/spec/animation/authentic-motion.html" target="_blank">Read more<span class="visually-hidden"> about Material Design Authentic motion</span></a></p>
-                    <!-- http://www.smashingmagazine.com/2013/10/23/smart-transitions-in-user-experience-design/ -->
-                    <!-- http://www.smashingmagazine.com/2012/02/28/mission-transition/ -->
+                    <label for="checkbox24">Learn & Respond</label>
+                    <p>Retrospect on the decision to determine if anything could have had a positive impact on the outcome and adapt the process accordingly <a class="more hide-for-print" href="http://boxesandarrows.com/competitive-analysis-understanding-the-market-context/" target="_blank">Read more</a></p>
                 </div>
                 <div class="right">
                     <input id="checkbox24" type="checkbox">
                 </div>
             </div>
         </div>
-        <div class="row clearfix">
-            <div id="Analyse" class="title"><span>Analyse</span></div>
-            <div class="cards clearfix">
-                <div class="img">
-                    <img class="left" src="img/icons128/target-copy.png" alt="">
-                </div>
-                <div class="card-content left">
-                    <label for="checkbox26">KPI Setup</label>
-                    <p>What you want to achieve? What are your goals? Write down how you define success and failure and check if you have everything you need to collect the data. <a class="more hide-for-print" href="http://www.gv.com/lib/how-to-choose-the-right-ux-metrics-for-your-product" target="_blank">Read more<span class="visually-hidden"> about How to Choose the Right UX Metrics for Your Product</span></a></p>
-                </div>
-                <div class="right">
-                    <input id="checkbox26" type="checkbox">
-                </div>
-            </div>
-            <div class="cards clearfix">
-                <div class="img">
-                    <img class="left" src="img/icons128/Article-Marketing.png" alt="">
-                </div>
-                <div class="card-content left">
-                    <label for="checkbox25">AB Test plan</label>
-                    <p>Plan your AB test ahead and, if you can, plan a short roadmap of improvements. Your goal is not just improving KPIs, but learning something. <a class="more hide-for-print" href="https://www.gov.uk/service-manual/user-centred-design/user-research/multivariate-testing.html" target="_blank">Read more<span class="visually-hidden"> about Craig Sullivan, an industry expert on conversion optimisation</span></a></p>
-                </div>
-                <div class="right">
-                    <input id="checkbox25" type="checkbox">
-                </div>
-            </div>
-            <div class="cards clearfix">
-                <div class="img">
-                    <img class="left" src="img/icons128/Conversion-Rate.png" alt="">
-                </div>
-                <div class="card-content left">
-                    <label for="checkbox27">Test</label>
-                    <p>UX lab, survey, sessions recording... test, observe and fix, test, observe and fix... <a class="more hide-for-print" href="http://www.nngroup.com/articles/which-ux-research-methods/" target="_blank">Read more<span class="visually-hidden"> about When to Use Which User-Experience Research Methods</span></a></p>
-                </div>
-                <div class="right">
-                    <input id="checkbox27" type="checkbox">
-                </div>
-            </div>
-        </div>
+        <!-- End Row -->
+    
+
     </form>
-    <footer id="footer" class="flexcontainer hide-for-print">
-
-        <div class="footerColumn hide-for-print">
-            <h3>Learn more</h3>
-            <h4>Read the story on Medium</h4>
-            <div id="articlePopUp" class="">
-                <a id="mediumLink" target="_blank" href="https://medium.com/@sovesove/ux-project-checklist-why-i-made-it-and-whats-next-6df312b0b92e">
-                    <img src="img/medium-author.png" alt="Author: Andrea" width="160">
-                    <img id="medium-logo" src="img/Medium-logo.png" alt="Medium article" width="100">
-                    <h2>UX Project Checklist — Why I made it and what’s next</h2>
-                </a>
-            </div>
-            <h4>Get $250 OFF on Springboard courses</h4>
-            <div id="springboard" class="">
-                <a id="springboardLink" target="_blank" href="https://www.springboard.com/invite/XUCZ1/">
-                    <img src="img/springboard.png" alt="Learn UX on Springboard">
-                </a>
-            </div>
-            <h4>The School of UX design courses (5% off with code UXPC5)</h4>
-            <div id="springboard" class="">
-                <a id="springboardLink" target="_blank" href="https://schoolofux.com/?ref=uxchecklist">
-                    <img src="img/theschoolofux-banner.png" 
-                         srcset="img/theschoolofux-banner@2x.png 2x, 
-                                 img/theschoolofux-banner@3x.png 3x"
-                         alt="The School of UX certified design courses with career and portfolio advice">
-                </a>
-            </div>
-        </div>
-
-        <div class="footerColumn">
-            <h3>About</h3>
-            <h4 id="credits">Created by</h4>
-            <a id="sovesove" class="twitterCard" href="https://twitter.com/sovesove" target="_blank"><img src="https://avatars.io/twitter/sovesove" alt=""><p>@sovesove</p></a></br>
-            <h4 id="inspiredby" class="hide-for-print clearfix">Friends</h4>
-            <a id="alefranz" class="twitterCard" href="https://twitter.com/alefranz" target="_blank"><img src="https://avatars.io/twitter/alefranz" alt=""><p>@alefranz</p></a></br>
-            <a id="uxstore" class="twitterCard" href="https://www.uxstore.com" target="_blank"><img src="/img/uxstore.png" alt="www.uxstore.com"></a></br>
-            <a id="friendsPopup" href="#friends" class="open-popup-link">Other credits</a></br>
-
-            <div id="friends" class="white-popup mfp-hide">
-                <p>
-                    Inspired by&nbsp;<a href="http://webdesignerschecklist.com/" target="_blank">this</a>,&nbsp;<a href="https://stayintech.com/info/UX" target="_blank">this</a>&nbsp;and&nbsp;<a href="http://ixdchecklist.com/" target="_blank">this</a>
-                </p>
-                <p>
-                    Also thanks to:</br>
-                    <a href="http://www.manuelalangella.com/" target="_blank">Manuela</a> for the superb illustrated icons.</br>
-                    <a href="http://dimsemenov.com/plugins/magnific-popup/" target="_blank">Magnific Popup</a> for this responsive modal popup.</br>
-                    <a href="http://garlicjs.org/" target="_blank">GarlicJs</a> for the garlic, which everyone knows helps you save digital things locally in your browser.</br>
-                    <a href="http://fntneves.github.io/jquery-labelauty/" target="_blank">Labelauty</a> for the checkbox beautifier.</br>
-                    <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> for the iconic font.</br>
-                </p>
-            </div>
-        </div>
-
-        <div class="footerColumn footerToolbar">
-            <h3>Tools</h3>
-            <div id="toolbar" class="hide-for-print">
-                <button id="print" type="button"><i class="fa fa-print"></i>Print</button>
-                <button id="reset" class="resetBtn"><i class="fa fa-refresh"></i>Reset</button>
-                <a id="github" class="button" href="https://github.com/uxchecklist/uxchecklist.github.io" target="_blank"><i class="fa fa-github"></i>Fork</a>
-            </div>
-
-            <div class="hide-for-print clearfix">
-                <a id="typeformLink" class="typeform-share button" href="https://sovesove.typeform.com/to/Ok2qWy" data-mode="1" target="_blank"><i class="fa fa-comment-o"></i>Tell us what you think!</a>
-                <script>
-                (function() {
-                    var qs, js, q, s, d = document,
-                        gi = d.getElementById,
-                        ce = d.createElement,
-                        gt = d.getElementsByTagName,
-                        id = 'typef_orm',
-                        b = 'https://s3-eu-west-1.amazonaws.com/share.typeform.com/';
-                    if (!gi.call(d, id)) {
-                        js = ce.call(d, 'script');
-                        js.id = id;
-                        js.src = b + 'share.js';
-                        q = gt.call(d, 'script')[0];
-                        q.parentNode.insertBefore(js, q)
-                    }
-                    id = id + '_';
-                    /*if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}*/
-                })()
-                </script>
-            </div>
-
-        </div>
-
-
-        <div id="buy-banner" class="buy-banner--wrapper buy-banner--wrapper--is-folded hide-for-print">
-            <div class="buy-banner--inner">
-                <span id="buy-banner-toggle" class="buy-banner--toggle">
-                    <i class="fa fa-chevron-up"></i>
-                </span>
-                <div class="buy-banner--header">
-                    <div id="buy-banner-toggle" class="buy-banner--text">
-                        <p>LOVE THIS?
-                            <br> Put it on your wall!</p>
-                    </div>
-                    <a id="buy-banner--button" href="https://uxchecklist.bigcartel.com/product/ux-checklist-poster" target="_blank" class="buy-banner--button">get the poster</a>
-                </div>
-                <div class="buy-banner--content">
-                    <a id="buy-banner--image" href="https://uxchecklist.bigcartel.com/product/ux-checklist-poster" target="_blank">
-                        <img src="img/banner.jpg" alt="" class="buy-banner--image">
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-    </footer>
 
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

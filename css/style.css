@@ -669,7 +669,8 @@ button,
 .cards div.img {
   margin-bottom: 10px;
   -ms-flex-negative: 0;
-  flex-shrink: 0; }
+  flex-shrink: 0;
+  display: none; }
 
 .cards .img img {
   width: 64px;
